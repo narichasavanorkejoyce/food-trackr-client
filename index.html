@@ -1,25 +1,101 @@
 <!DOCTYPE html>
 <html>
-    <head>
-      <title>Example</title>
-      <meta name="viewport" content="width=device-width, initial-scale=1">
 
-      <!-- Do not add `link` tags unless you know what you are doing -->
-      <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+<head>
+  <title>foodTrackr</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
 
-      <!-- Do not add `script` tags unless you know what you are doing -->
-      <script src="public/vendor.js" type="text/javascript" charset="utf-8" defer></script>
-      <script src="public/application.js" type="text/javascript" charset="utf-8" defer></script>
-    </head>
-    <body class="container-fluid">
-      <h1>Example</h1>
+  <!-- Link to Pure.Css -->
+  <link rel="stylesheet" href="https://unpkg.com/purecss@0.6.2/build/pure-min.css" integrity="sha384-UQiGfs9ICog+LwheBSRCt1o5cbyKIHbwjWscjemyBMT9YCUMZffs6UqUTd0hObXD" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://unpkg.com/purecss@0.6.2/build/grids-responsive-min.css">
 
-      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
-      eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
-      minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex
-      ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
-      velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat
-      cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id
-      est laborum.</p>
-    </body>
+  <!-- Link to main.css -->
+  <link rel="stylesheet" type="text/css" href="assets/styles/index.scss">
+  <!-- Do not add `link` tags unless you know what you are doing -->
+  <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+
+  <!-- Do not add `script` tags unless you know what you are doing -->
+  <script src="public/vendor.js" type="text/javascript" charset="utf-8" defer></script>
+  <script src="public/application.js" type="text/javascript" charset="utf-8" defer></script>
+</head>
+
+<body class="container-fluid">
+
+  <div id="layout">
+
+    <!-- Menu -->
+    <!-- Menu toggle -->
+    <a href="#menu" id="menuLink" class="menu-link">
+      <!-- Hamburger icon -->
+      <span></span>
+    </a>
+
+    <div id="menu">
+      <div class="pure-menu">
+        <ul class="pure-menu-list">
+          <li class="pure-menu-item"><a href="#" class="pure-menu-link">Change Password</a></li>
+          <li class="pure-menu-item"><a href="#" class="pure-menu-link">Sign Out</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="content">
+      <!-- App Title -->
+      <div class="header">
+        <h1>foodTrackr</h1>
+      </div>
+<br>
+      <!-- Sign Up Form -->
+      <form class="pure-form pure-form-aligned">
+        <fieldset>
+          <div class="pure-control-group">
+            <label for="name">email</label>
+            <input id="name-sign-up" type="text" placeholder="email" name="credentials[email]">
+            <span class="pure-form-message-inline">This is a required field.</span>
+          </div>
+
+          <div class="pure-control-group">
+            <label for="password">password</label>
+            <input id="password-sign-up" type="password" placeholder="password" name="credentials[password]">
+            <span class="pure-form-message-inline">This is a required field.</span>
+          </div>
+
+          <div class="pure-control-group">
+            <label for="password">confirm password</label>
+            <input id="password-confirm" type="password" placeholder="confirm password" name="credentials[password_confirmation]">
+            <span class="pure-form-message-inline">This is a required field.</span>
+          </div>
+
+          <div class="pure-controls">
+            <button type="submit" class="pure-button pure-button-primary">Sign Up</button>
+          </div>
+          <div class="auth-responses" id="sign-up-response">&nbsp;</div>
+        </fieldset>
+      </form>
+
+      <!-- Sign In Form -->
+      <form class="pure-form pure-form-aligned">
+        <fieldset>
+          <div class="pure-control-group">
+            <label for="name">email</label>
+            <input id="name-sign-in" type="text" placeholder="email" name="credentials[email]">
+            <span class="pure-form-message-inline">This is a required field.</span>
+          </div>
+
+          <div class="pure-control-group">
+            <label for="password">password</label>
+            <input id="password-sign-in" type="password" placeholder="password" name="credentials[password]">
+            <span class="pure-form-message-inline">This is a required field.</span>
+          </div>
+
+          <div class="pure-controls">
+            <button type="submit" class="pure-button pure-button-primary">Sign In</button>
+          </div>
+          <div class="auth-responses" id="sign-in-response">&nbsp;</div>
+        </fieldset>
+      </form>
+    </div>
+  </div>
+</body>
+
 </html>
