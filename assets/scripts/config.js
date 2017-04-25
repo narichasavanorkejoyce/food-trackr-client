@@ -2,7 +2,8 @@
 
 const config = {
   apiOrigins: {
-    production: 'https://ga-wdi-boston.herokuapp.com'
+    production: 'https://shielded-hamlet-87365.herokuapp.com/'
+    // production: 'https://ga-wdi-boston.herokuapp.com'
   }
 }
 
