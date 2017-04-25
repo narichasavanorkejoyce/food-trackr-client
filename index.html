@@ -113,7 +113,7 @@
           <div class="pure-controls">
             <button type="submit" class="pure-button pure-button-primary">Change Password</button>
           </div>
-          <div class="auth-responses" id="sign-in-response">&nbsp;</div>
+          <div class="auth-responses" id="change-pwd-response">&nbsp;</div>
         </fieldset>
       </form>
 
@@ -141,13 +141,17 @@
           <div class="pure-control-group">
             <label for="store">store name</label>
             <input id="store-name" type="text" placeholder="store name" name="food[store_name]">
-            <span class="pure-form-message-inline">This is a required field.</span>
           </div>
 
           <div class="pure-controls">
-            <button type="submit" class="pure-button pure-button-primary">Add</button>
+            <button type="submit" class="pure-button pure-button-primary" id="add-item">Add</button>
           </div>
-          <div class="auth-responses" id="sign-in-response">&nbsp;</div>
+
+          <div class="pure-controls">
+            <button type="submit" class="pure-button pure-button-primary" id="done-adding-items">Done</button>
+          </div>
+
+          <div class="auth-responses" id="add-item-response">&nbsp;</div>
         </fieldset>
       </form>
 
