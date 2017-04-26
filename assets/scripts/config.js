@@ -2,7 +2,7 @@
 
 const config = {
   apiOrigins: {
-    production: 'https://shielded-hamlet-87365.herokuapp.com/'
+    production: 'https://food-trackr.herokuapp.com/'
     // production: 'https://ga-wdi-boston.herokuapp.com'
   }
 }
