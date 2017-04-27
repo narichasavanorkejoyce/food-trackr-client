@@ -3,6 +3,7 @@
 const setAPIOrigin = require('../../lib/set-api-origin')
 const config = require('./config')
 const authEvents = require('./auth/events.js')
+const trackrEvents = require('/trackr-auth/events.js')
 
 // On document ready
 $(() => {
@@ -10,6 +11,11 @@ $(() => {
 })
 
 // Bring in login events
+$(() => {
+  authEvents.addHandlers()
+})
+
+// Bring in tracker events
 $(() => {
   authEvents.addHandlers()
 })
