@@ -128,7 +128,7 @@
       </form>
 
       <!-- Add Item -->
-      <form class="pure-form pure-form-aligned">
+      <form id="add-item" class="pure-form pure-form-aligned">
         <fieldset>
           <div class="pure-control-group">
             <label for="name">item name</label>
@@ -154,16 +154,18 @@
           </div>
 
           <div class="pure-controls">
-            <button type="submit" class="pure-button pure-button-primary" id="add-item">Add</button>
+            <input type="submit" name="submit" value="Add" class="pure-button pure-button-primary">
           </div>
-
-          <div class="pure-controls">
-            <button type="submit" class="pure-button pure-button-primary" id="done-adding-items">Done</button>
-          </div>
-
-          <div class="auth-responses" id="add-item-response">&nbsp;</div>
         </fieldset>
       </form>
+
+      <!-- Get all items -->
+      <div class="pure-controls">
+        <button type="button" class="pure-button pure-button-primary" id="done-adding-items">Done</button>
+      </div>
+
+      <div class="auth-responses" id="add-item-response">&nbsp;</div>
+
 
       <!-- Food/Add/Shop Buttons -->
       <div class="food-shop-add-footer">
