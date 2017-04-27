@@ -25,6 +25,7 @@ const signInFail = () => {
 const signOutSuccess = () => {
   store.user = null
   // console.log(store)
+  $('#sign-out-response').text('User has signed out!')
 }
 
 const changePasswordSuccess = () => {
