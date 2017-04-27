@@ -96,22 +96,44 @@
       </form>
 
       <!-- Change Password -->
-      <form class="pure-form pure-form-aligned">
+      <form id="change-password" class="pure-form pure-form-aligned">
         <fieldset>
           <div class="pure-control-group">
             <label for="name">old password</label>
-            <input id="old-password" type="password" placeholder="old password" name="passwords[old]">
+            <input type="password" name="passwords[old]" value="" placeholder="old password" id="old-password">
             <span class="pure-form-message-inline">This is a required field.</span>
           </div>
 
           <div class="pure-control-group">
             <label for="password">new password</label>
-            <input id="new-password" type="password" placeholder="password" name="passwords[new]">
+            <input type="password" name="passwords[new]" value="" placeholder="new password" id="new-password">
             <span class="pure-form-message-inline">This is a required field.</span>
           </div>
 
           <div class="pure-controls">
-            <button type="submit" class="pure-button pure-button-primary">Change Password</button>
+            <input type="submit" name="submit" value="Change Password" id="submit-change-pwd" class="pure-button pure-button-primary">
+          </div>
+          <div class="auth-responses" id="change-pwd-inst">&nbsp;</div>
+        </fieldset>
+      </form>
+
+      <!-- Sign Out -->
+      <form id="change-password" class="pure-form pure-form-aligned">
+        <fieldset>
+          <div class="pure-control-group">
+            <label for="name">old password</label>
+            <input type="password" name="passwords[old]" value="" placeholder="old password" id="old-password">
+            <span class="pure-form-message-inline">This is a required field.</span>
+          </div>
+
+          <div class="pure-control-group">
+            <label for="password">new password</label>
+            <input type="password" name="passwords[new]" value="" placeholder="new password" id="new-password">
+            <span class="pure-form-message-inline">This is a required field.</span>
+          </div>
+
+          <div class="pure-controls">
+            <input type="submit" name="submit" value="Change Password" id="submit-change-pwd" class="pure-button pure-button-primary">
           </div>
           <div class="auth-responses" id="change-pwd-inst">&nbsp;</div>
         </fieldset>
