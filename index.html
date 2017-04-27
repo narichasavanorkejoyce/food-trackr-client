@@ -46,28 +46,28 @@
       </div>
       <br>
       <!-- Sign Up Form -->
-      <form class="pure-form pure-form-aligned">
+      <form id="sign-up" class="pure-form pure-form-aligned">
         <fieldset>
           <div class="pure-control-group">
             <label for="name">email</label>
-            <input id="name-sign-up" type="text" placeholder="email" name="credentials[email]">
+            <input type="text" name="credentials[email]" value="" placeholder="email" id="sign-up-email">
             <span class="pure-form-message-inline">This is a required field.</span>
           </div>
 
           <div class="pure-control-group">
             <label for="password">password</label>
-            <input id="password-sign-up" type="password" placeholder="password" name="credentials[password]">
+            <input type="password" name="credentials[password]" value="" placeholder="password" id="sign-up-password">
             <span class="pure-form-message-inline">This is a required field.</span>
           </div>
 
           <div class="pure-control-group">
             <label for="password">confirm password</label>
-            <input id="password-confirm" type="password" placeholder="confirm password" name="credentials[password_confirmation]">
+            <input type="password" name="credentials[password_confirmation]" value="" placeholder="password confirmation" id="sign-up-confirm">
             <span class="pure-form-message-inline">This is a required field.</span>
           </div>
 
           <div class="pure-controls">
-            <button type="submit" class="pure-button pure-button-primary">Sign Up</button>
+            <input type="submit" name="submit" value="Sign up!" class="pure-button pure-button-primary">
           </div>
           <div class="auth-responses" id="sign-up-response">&nbsp;</div>
         </fieldset>
