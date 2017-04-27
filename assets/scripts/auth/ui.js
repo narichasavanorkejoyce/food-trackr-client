@@ -14,7 +14,7 @@ const failureSignUp = () => {
 const signInSuccess = (data) => {
   store.user = data.user
   // console.log(store)
-  $('#sign-in-response').text('Success! Click "Start!" to play the game.')
+  $('#sign-in-response').text('Success! User has signed in.')
 }
 
 const signInFail = () => {

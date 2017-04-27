@@ -74,22 +74,22 @@
       </form>
 
       <!-- Sign In Form -->
-      <form class="pure-form pure-form-aligned">
+      <form id="sign-in" class="pure-form pure-form-aligned">
         <fieldset>
           <div class="pure-control-group">
             <label for="name">email</label>
-            <input id="name-sign-in" type="text" placeholder="email" name="credentials[email]">
+            <input type="text" name="credentials[email]" value="" placeholder="email" id="sign-in-email">
             <span class="pure-form-message-inline">This is a required field.</span>
           </div>
 
           <div class="pure-control-group">
             <label for="password">password</label>
-            <input id="password-sign-in" type="password" placeholder="password" name="credentials[password]">
+            <input type="password" name="credentials[password]" value="" placeholder="password" id="sign-in-password">
             <span class="pure-form-message-inline">This is a required field.</span>
           </div>
 
           <div class="pure-controls">
-            <button type="submit" class="pure-button pure-button-primary">Sign In</button>
+            <input type="submit" name="submit" value="Sign in!" class="pure-button pure-button-primary">
           </div>
           <div class="auth-responses" id="sign-in-response">&nbsp;</div>
         </fieldset>
