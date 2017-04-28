@@ -13,12 +13,13 @@ const addNewItem = function (event) {
   console.log('addNewItem ran!')
 }
 
-// const onGetAllItems = function () {
-//   api.getAllItems()
-//   .done(ui.getAllItemsSuccess)
-//   .fail(ui.getAllItemsFail)
-// }
-//
+const getFoodItems = function (event) {
+  event.preventDefault()
+  api.getFoodItems()
+    .done(ui.getFoodItemsSuccess)
+    .fail(ui.getFoodItemsFail)
+}
+
 // const onUpdateItem = function (data) {
 //   api.updateItem(data)
 //   .done(ui.updateItemSuccess)
@@ -33,9 +34,7 @@ const addNewItem = function (event) {
 
 const trackrHandlers = () => {
   $('#add-item').on('submit', addNewItem)
-  // $('#done-adding-items').on('click', onGetAllItems)
-  // $('#sign-out').on('submit', onSignOut)
-  // $('#change-password').on('submit', onChangePassword)
+  $('#get-food-items').on('click', getFoodItems)
 }
 
 module.exports = {

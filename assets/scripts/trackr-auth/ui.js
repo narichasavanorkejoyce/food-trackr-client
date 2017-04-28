@@ -11,7 +11,19 @@ const addNewItemFail = (error) => {
   console.log('addNewItem failed!')
 }
 
+const getFoodItemsSuccess = (data) => {
+  console.log(data)
+  console.log('getAllItems worked!')
+}
+
+const getFoodItemsFail = (error) => {
+  console.error(error)
+  console.log('getAllItems failed.')
+}
+
 module.exports = {
   addNewItemSuccess,
-  addNewItemFail
+  addNewItemFail,
+  getFoodItemsSuccess,
+  getFoodItemsFail
 }

@@ -15,6 +15,19 @@ const addNewItem = function (data) {
   })
 }
 
+const getFoodItems = function () {
+  // console.log(data)
+  return $.ajax({
+    url: config.apiOrigin + '/items?quantity=true',
+    method: 'GET',
+    headers: {
+      Authorization: 'Token token=' + store.user.token
+    }
+    // data
+  })
+}
+
 module.exports = {
-  addNewItem
+  addNewItem,
+  getFoodItems
 }
