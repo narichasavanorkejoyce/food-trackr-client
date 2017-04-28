@@ -15,15 +15,15 @@ const addNewItem = function (data) {
   })
 }
 
-const getFoodItems = function () {
+const getFoodItems = function (data) {
   // console.log(data)
   return $.ajax({
     url: config.apiOrigin + '/items?quantity=true',
     method: 'GET',
     headers: {
       Authorization: 'Token token=' + store.user.token
-    }
-    // data
+    },
+    data
   })
 }
 
