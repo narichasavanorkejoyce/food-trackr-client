@@ -1,5 +1,7 @@
 'use strict'
 const store = require('../store.js')
+const displayFoodItemsTemplate = require('../templates/get-food-items.handlebars')
+const displayGroceryListTemplate = require('../templates/get-grocery-list.handlebars')
 
 const addNewItemSuccess = (data) => {
   console.log('addNewItemSuccess worked!')
@@ -14,6 +16,8 @@ const addNewItemFail = (error) => {
 const getFoodItemsSuccess = (data) => {
   console.log(data)
   console.log('getAllItems worked!')
+  const displayFoodItems = displayFoodItemsTemplate({ items: data.items })
+  $('#show-food-list').append(displayFoodItems)
 }
 
 const getFoodItemsFail = (error) => {
@@ -24,6 +28,8 @@ const getFoodItemsFail = (error) => {
 const getGroceryListSuccess = (data) => {
   console.log(data)
   console.log('getAllItems worked!')
+  const displayGroceryList = displayGroceryListTemplate({ items: data.items })
+  $('#show-grocery-list').append(displayGroceryList)
 }
 
 const getGroceryListFail = (error) => {
