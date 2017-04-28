@@ -2,7 +2,7 @@
 const store = require('../store.js')
 
 const successSignUp = (data) => {
-  // console.log(data)
+  console.log(data)
   $('#sign-up-response').text('Awesome! Now, please sign in.')
 }
 
@@ -13,7 +13,7 @@ const failureSignUp = () => {
 
 const signInSuccess = (data) => {
   store.user = data.user
-  // console.log(store)
+  console.log(store)
   $('#sign-in-response').text('Success! User has signed in.')
 }
 
@@ -24,7 +24,7 @@ const signInFail = () => {
 
 const signOutSuccess = () => {
   store.user = null
-  // console.log(store)
+  console.log(store)
   $('#sign-out-response').text('User has signed out!')
 }
 
