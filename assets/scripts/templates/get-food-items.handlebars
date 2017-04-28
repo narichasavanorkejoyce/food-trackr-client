@@ -1,0 +1,12 @@
+{{#each items as |item|}}
+
+ <!-- Developers, why are we using data-id and not just id? -->
+  <ul id={{item.id}}>
+  <div>
+    <li>{{item.food_name}}</li>
+    <li>{{item.days_to_exp}}</li>
+    <li><button class='purchased-item'>X</button></li>
+  </div>
+  </ul>
+
+{{/each}}
