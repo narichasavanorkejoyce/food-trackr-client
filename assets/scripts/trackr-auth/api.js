@@ -27,7 +27,20 @@ const getFoodItems = function (data) {
   })
 }
 
+const getGroceryList = function (data) {
+  // console.log(data)
+  return $.ajax({
+    url: config.apiOrigin + '/items?quantity=false',
+    method: 'GET',
+    headers: {
+      Authorization: 'Token token=' + store.user.token
+    },
+    data
+  })
+}
+
 module.exports = {
   addNewItem,
-  getFoodItems
+  getFoodItems,
+  getGroceryList
 }

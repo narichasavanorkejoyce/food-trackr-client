@@ -20,6 +20,13 @@ const getFoodItems = function (event) {
     .fail(ui.getFoodItemsFail)
 }
 
+const getGroceryList = function (event) {
+  event.preventDefault()
+  api.getGroceryList()
+    .done(ui.getGroceryListSuccess)
+    .fail(ui.getGroceryListFail)
+}
+
 // const onUpdateItem = function (data) {
 //   api.updateItem(data)
 //   .done(ui.updateItemSuccess)
@@ -35,6 +42,7 @@ const getFoodItems = function (event) {
 const trackrHandlers = () => {
   $('#add-item').on('submit', addNewItem)
   $('#get-food-items').on('click', getFoodItems)
+  $('#get-grocery-list').on('click', getGroceryList)
 }
 
 module.exports = {
