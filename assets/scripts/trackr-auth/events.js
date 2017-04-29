@@ -27,22 +27,32 @@ const getGroceryList = function (event) {
     .fail(ui.getGroceryListFail)
 }
 
-// const onUpdateItem = function (data) {
-//   api.updateItem(data)
-//   .done(ui.updateItemSuccess)
-//   .fail(ui.updateItemFail)
-// }
-//
-// const onRemoveItem = function (data) {
-//   api.removeItem(data)
-//   .done(ui.removeItemSuccess)
-//   .fail(ui.removeItemFail)
-// }
+const deleteItem = function () {
+  console.log('deleteItem ran!')
+  event.preventDefault()
+  const data = $(this).attr('data-id')
+  api.deleteItem(data)
+    .done(ui.deleteItemSuccess(data))
+    .fail(ui.deleteItemFail)
+}
+
+const updateQuantity = function (event) {
+  event.preventDefault()
+  console.log('updateQuantity button works')
+  const id = $(this).attr('data-id')
+  console.log(id)
+  api.updateQuantity(id)
+    .done(ui.updateQuantitySuccess)
+    .fail(ui.updateQuantityFail)
+  console.log('updateQuantity ran!')
+}
 
 const trackrHandlers = () => {
   $('#add-item').on('submit', addNewItem)
   $('#get-food-items').on('click', getFoodItems)
   $('#get-grocery-list').on('click', getGroceryList)
+  $('.remove-item').on('click', deleteItem)
+  $('.move-to-grocery-list').on('click', updateQuantity)
 }
 
 module.exports = {

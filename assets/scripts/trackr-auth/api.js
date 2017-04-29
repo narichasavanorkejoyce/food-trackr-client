@@ -39,8 +39,37 @@ const getGroceryList = function (data) {
   })
 }
 
+const updateQuantity = function (data, id) {
+  console.log('data' + data)
+  console.log('store' + store)
+  return $.ajax({
+    url: config.apiOrigin + '/items/' + id,
+    method: 'PATCH',
+    headers: {
+      Authorization: 'Token token=' + store.user.token
+    },
+    data: {
+      'item': {
+        'quantity': 'false'
+      }
+    }
+  })
+}
+
+const deleteItem = (data) => {
+  return $.ajax({
+    url: config.apiOrigin + '/items/' + data,
+    method: 'DELETE',
+    headers: {
+      Authorization: 'Token token=' + store.user.token
+    }
+  })
+}
+
 module.exports = {
   addNewItem,
   getFoodItems,
-  getGroceryList
+  getGroceryList,
+  updateQuantity,
+  deleteItem
 }

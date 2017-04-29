@@ -10,11 +10,11 @@
 
   {{#each items as |item|}}
 
-    <tbody>
-      <td>{{item.food_name}}</td>
-      <td>{{item.exp_date}}</td>
-      <td><button id='remove-item'>X</button></td>
-      <td><button id='move-to-grocery-list'>X</button></td>
+    <tbody data-id="{{item.id}}">
+      <td data-id="{{item.id}}">{{item.food_name}}</td>
+      <td data-id="{{item.id}}">{{item.exp_date}}</td>
+      <td><button type="button" data-id="{{item.id}}" class="remove-item">X</button></td>
+      <td><button type="button" data-id="{{item.id}}" class="move-to-grocery-list">X</button></td>
     </tbody>
 
   {{/each}}

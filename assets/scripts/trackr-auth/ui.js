@@ -6,6 +6,7 @@ const displayGroceryListTemplate = require('../templates/get-grocery-list.handle
 const addNewItemSuccess = (data) => {
   console.log('addNewItemSuccess worked!')
   store.item = data.item
+  $('#add-item-response').text('Success!')
 }
 
 const addNewItemFail = (error) => {
@@ -37,11 +38,34 @@ const getGroceryListFail = (error) => {
   console.log('getAllItems failed.')
 }
 
+const updateQuantitySuccess = (data) => {
+  console.log(data)
+  console.log('updateQuantity worked!')
+}
+
+const updateQuantityFail = (error) => {
+  console.error(error)
+  console.log('updateQuantity failed.')
+}
+
+const deleteItemSuccess = (data) => {
+  console.log(data)
+  console.log('item has been deleted!')
+}
+
+const deleteItemFail = (error) => {
+  console.error(error)
+}
+
 module.exports = {
   addNewItemSuccess,
   addNewItemFail,
   getFoodItemsSuccess,
   getFoodItemsFail,
   getGroceryListSuccess,
-  getGroceryListFail
+  getGroceryListFail,
+  updateQuantitySuccess,
+  updateQuantityFail,
+  deleteItemSuccess,
+  deleteItemFail
 }
