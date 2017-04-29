@@ -1,12 +1,22 @@
-{{#each items as |item|}}
+<table class="pure-table pure-table-horizontal">
+  <thead>
+    <tr>
+      <th>Food Name</th>
+      <th>Days To Exp</th>
+      <th>Remove</th>
+      <th>Move To Grocery List</th>
+    </tr>
+  </thead>
 
- <!-- Developers, why are we using data-id and not just id? -->
-  <ul id={{item.id}}>
-  <div>
-    <li>{{item.food_name}}</li>
-    <li>{{item.days_to_exp}}</li>
-    <li><button class='purchased-item'>X</button></li>
-  </div>
-  </ul>
+  {{#each items as |item|}}
 
-{{/each}}
+    <tbody>
+      <td>{{item.food_name}}</td>
+      <td>{{item.exp_date}}</td>
+      <td><button id='remove-item'>X</button></td>
+      <td><button id='move-to-grocery-list'>X</button></td>
+    </tbody>
+
+  {{/each}}
+
+</table>
