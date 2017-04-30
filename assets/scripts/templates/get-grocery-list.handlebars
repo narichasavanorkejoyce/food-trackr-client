@@ -7,13 +7,12 @@
       </tr>
     </thead>
 
-{{#each items as |item|}}
-
     <tbody>
-      <tr>
+      {{#each items as |item|}}
+      <tr data-id="{{item.id}}">
         <td>{{item.food_name}}</td>
         <td>{{item.store_name}}</td>
-        <td><button id='move-to-food-list'>X</button></td>
+        <td><button type="button" class='remove-item pure-button' data-id="{{item.id}}">X</button></td>
       </tr>
     </tbody>
 
