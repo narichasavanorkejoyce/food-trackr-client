@@ -1,6 +1,7 @@
 <table class="pure-table pure-table-horizontal">
   <thead>
     <tr>
+      <th>Item ID</th>
       <th>Food Name</th>
       <th>Days To Exp</th>
       <th>Remove</th>
@@ -8,15 +9,21 @@
     </tr>
   </thead>
 
-  {{#each items as |item|}}
 
-    <tbody data-id="{{item.id}}">
-      <td data-id="{{item.id}}">{{item.food_name}}</td>
-      <!-- <td data-id="{{item.id}}">{{item.exp_date}}</td> -->
-      <td data-id="{{item.id}}">{{item.days_to_exp}}</td>
-      <td><button type="button" data-id="{{item.id}}" class="remove-item">X</button></td>
-      <td><button type="button" data-id="{{item.id}}" class="move-to-grocery-list">X</button></td>
-    </tbody>
+  <tbody>
+    <!-- <form> -->
+    <!-- <fieldset> -->
+    {{#each items as |item|}}
+      <tr data-id="{{item.id}}">
+        <td>{{item.id}}</td>
+        <td>{{item.food_name}}</td>
+        <td>{{item.days_to_exp}}</td>
+        <td><button type="button" class="remove-item pure-button" data-id="{{item.id}}">X</button></td>
+        <td><button type="button" class="move-to-grocery-list">X</button></td>
+      </tr>
+      <!-- </fieldset> -->
+      <!-- </form> -->
+  </tbody>
 
   {{/each}}
 

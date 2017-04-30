@@ -30,9 +30,10 @@ const getGroceryList = function (event) {
 const deleteItem = function () {
   console.log('deleteItem ran!')
   event.preventDefault()
-  const data = $(this).attr('data-id')
-  api.deleteItem(data)
-    .done(ui.deleteItemSuccess(data))
+  const id = $(this).attr('data-id')
+  console.log('id is:' + id)
+  api.deleteItem(id)
+    .done(ui.deleteItemSuccess)
     .fail(ui.deleteItemFail)
 }
 
@@ -51,7 +52,7 @@ const trackrHandlers = () => {
   $('#add-item').on('submit', addNewItem)
   $('#get-food-items').on('click', getFoodItems)
   $('#get-grocery-list').on('click', getGroceryList)
-  $('.remove-item').on('click', deleteItem)
+  $(document).on('click', '.remove-item', deleteItem)
   $('.move-to-grocery-list').on('click', updateQuantity)
 }
 
