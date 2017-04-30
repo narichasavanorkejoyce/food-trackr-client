@@ -39,9 +39,20 @@ const getGroceryList = function (data) {
   })
 }
 
-const updateQuantity = function (data, id) {
-  console.log('data' + data)
-  console.log('store' + store)
+const deleteItem = (id) => {
+  return $.ajax({
+    url: config.apiOrigin + '/items/' + id,
+    method: 'DELETE',
+    headers: {
+      Authorization: 'Token token=' + store.user.token
+    }
+  })
+}
+
+const updateQuantity = function (id) {
+  // data = store.item
+  // console.log('data is: ' + data)
+  // console.log('store' + store)
   return $.ajax({
     url: config.apiOrigin + '/items/' + id,
     method: 'PATCH',
@@ -56,20 +67,10 @@ const updateQuantity = function (data, id) {
   })
 }
 
-const deleteItem = (id) => {
-  return $.ajax({
-    url: config.apiOrigin + '/items/' + id,
-    method: 'DELETE',
-    headers: {
-      Authorization: 'Token token=' + store.user.token
-    }
-  })
-}
-
 module.exports = {
   addNewItem,
   getFoodItems,
   getGroceryList,
-  updateQuantity,
-  deleteItem
+  deleteItem,
+  updateQuantity
 }

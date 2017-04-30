@@ -41,7 +41,7 @@ const updateQuantity = function (event) {
   event.preventDefault()
   console.log('updateQuantity button works')
   const id = $(this).attr('data-id')
-  console.log(id)
+  console.log('id is:' + id)
   api.updateQuantity(id)
     .done(ui.updateQuantitySuccess)
     .fail(ui.updateQuantityFail)
@@ -53,7 +53,7 @@ const trackrHandlers = () => {
   $('#get-food-items').on('click', getFoodItems)
   $('#get-grocery-list').on('click', getGroceryList)
   $(document).on('click', '.remove-item', deleteItem)
-  $('.move-to-grocery-list').on('click', updateQuantity)
+  $(document).on('click', '.move-to-grocery-list', updateQuantity)
 }
 
 module.exports = {
