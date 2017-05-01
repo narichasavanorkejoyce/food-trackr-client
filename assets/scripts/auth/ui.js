@@ -20,6 +20,7 @@ const signInSuccess = (data) => {
   $('.food-add-shop').show()
   $('.navbar-nav').show()
   $('.navbar-toggle').show()
+  $('#instr-jumbotron').show()
 }
 
 const signInFail = () => {
@@ -41,7 +42,8 @@ const signOutSuccess = () => {
 const changePasswordSuccess = () => {
   $('#change-pwd-inst').text('Password successfully changed!')
   // console.log('Password Successfully Changed.')
-  $('#change-password-jumbotron').delay(800).fadeOut('fast')
+  $('#change-password-jumbotron').delay(800).fadeOut()
+  $('#instr-jumbotron').delay(1600).fadeIn()
 }
 
 const changePasswordFail = () => {

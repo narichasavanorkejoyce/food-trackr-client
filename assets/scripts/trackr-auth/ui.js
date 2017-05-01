@@ -6,7 +6,7 @@ const displayGroceryListTemplate = require('../templates/get-grocery-list.handle
 const addNewItemSuccess = (data) => {
   console.log('addNewItemSuccess worked!')
   store.item = data.item
-  $('#add-item-response').text('Success!')
+  $('#add-item-response').text('Success! Click FOOD to see all items.')
 }
 
 const addNewItemFail = (error) => {
@@ -17,8 +17,14 @@ const addNewItemFail = (error) => {
 const getFoodItemsSuccess = (data) => {
   console.log(data)
   console.log('getAllItems worked!')
+  $('#show-food-list').empty()
+  $('#show-grocery-list').empty()
   const displayFoodItems = displayFoodItemsTemplate({ items: data.items })
   $('#show-food-list').append(displayFoodItems)
+  $('#add-item-jumbotron').hide()
+  $('#instr-jumbotron').hide()
+  $('#change-password-jumbotron').hide()
+  $('#sign-out-jumbotron').hide()
 }
 
 const getFoodItemsFail = (error) => {
@@ -29,8 +35,14 @@ const getFoodItemsFail = (error) => {
 const getGroceryListSuccess = (data) => {
   console.log(data)
   console.log('getAllItems worked!')
+  $('#show-food-list').empty()
+  $('#show-grocery-list').empty()
   const displayGroceryList = displayGroceryListTemplate({ items: data.items })
   $('#show-grocery-list').append(displayGroceryList)
+  $('#add-item-jumbotron').hide()
+  $('#instr-jumbotron').hide()
+  $('#change-password-jumbotron').hide()
+  $('#sign-out-jumbotron').hide()
 }
 
 const getGroceryListFail = (error) => {
@@ -41,6 +53,7 @@ const getGroceryListFail = (error) => {
 const updateQuantitySuccess = (data) => {
   console.log(data)
   console.log('updateQuantity worked!')
+  $('#show-grocery-list').empty()
 }
 
 const updateQuantityFail = (error) => {
@@ -51,6 +64,7 @@ const updateQuantityFail = (error) => {
 const deleteItemSuccess = (data) => {
   console.log(data)
   console.log('item has been deleted!')
+  $('#show-food-list').empty()
 }
 
 const deleteItemFail = (error) => {

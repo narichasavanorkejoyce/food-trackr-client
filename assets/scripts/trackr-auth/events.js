@@ -20,8 +20,22 @@ const getFoodItems = function (event) {
     .fail(ui.getFoodItemsFail)
 }
 
+const getFoodItemsAgain = function () {
+  // event.preventDefault()
+  api.getFoodItems()
+    .done(ui.getFoodItemsSuccess)
+    .fail(ui.getFoodItemsFail)
+}
+
 const getGroceryList = function (event) {
   event.preventDefault()
+  api.getGroceryList()
+    .done(ui.getGroceryListSuccess)
+    .fail(ui.getGroceryListFail)
+}
+
+const getGroceryListAgain = function () {
+  // event.preventDefault()
   api.getGroceryList()
     .done(ui.getGroceryListSuccess)
     .fail(ui.getGroceryListFail)
@@ -33,7 +47,7 @@ const deleteItem = function () {
   const id = $(this).attr('data-id')
   console.log('id is:' + id)
   api.deleteItem(id)
-    .done(ui.deleteItemSuccess)
+    .done(ui.deleteItemSuccess, getFoodItemsAgain)
     .fail(ui.deleteItemFail)
 }
 
@@ -43,7 +57,7 @@ const updateQuantity = function (event) {
   const id = $(this).attr('data-id')
   console.log('id is:' + id)
   api.updateQuantity(id)
-    .done(ui.updateQuantitySuccess)
+    .done(ui.updateQuantitySuccess, getGroceryListAgain)
     .fail(ui.updateQuantityFail)
   console.log('updateQuantity ran!')
 }
