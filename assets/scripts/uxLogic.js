@@ -1,34 +1,25 @@
 const uxLogicHandlers = () => {
-  // $('#game-info').hide()
-  // $('#play-tic-tac-toe').hide()
+  // Hide the quantity and purchased fields - we always want these to be entered as "true"
+  $('#quantity').hide()
+  $('#purchased').hide()
 
-//   $('#user-starts-game').on('submit', function () {
-//     $('#play-tic-tac-toe').show()
-//     $('#user-logs-in').hide()
-//     $('#old-password').hide().val('')
-//     $('#new-password').hide().val('')
-//     $('#submit-change-pwd').hide()
-//     $('#num-games-completed').val('')
-//     $('#num-x-wins').val('')
-//     $('#num-o-wins').val('')
-//   })
-//
-//   $('#sign-out').on('submit', function () {
-//     $('#play-tic-tac-toe').hide()
-//     $('#user-logs-in').show()
-//     $('#sign-up-email').val('')
-//     $('#sign-up-password').val('')
-//     $('#sign-up-confirm').val('')
-//     $('#sign-in-email').val('')
-//     $('#sign-in-password').val('')
-//     $('.auth-responses').text('')
-//   })
-//
-//   $('#change-pwd').on('click', function () {
-//     $('#old-password').show()
-//     $('#new-password').show()
-//     $('#submit-change-pwd').show()
-//   })
+  // Show/hide user auth jumbotrons
+  // $('#sign-up-jumbotron').hide()
+  // $('#sign-in-jumbotron').hide()
+  // $('#change-password-jumbotron').hide()
+  // $('#sign-out-jumbotron').hide()
+  //
+  // $('#nav-to-sign-up-form').on('click', function () {
+  //   $('#sign-up-jumbotron').show()
+  //   $('#sign-in-jumbotron').show()
+  //   $('#intro-jumbotron').hide()
+  // })
+
+  // Show/hide food
+  // $('#footer-navbar').hide()
+
+  // Show/hide add item form
+  // $('#add-item-jumbotron').hide()
 }
 
 module.exports = {

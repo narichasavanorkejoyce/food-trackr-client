@@ -4,6 +4,10 @@ const store = require('../store.js')
 const successSignUp = (data) => {
   console.log(data)
   $('#sign-up-response').text('Awesome! Now, please sign in.')
+  // $('#sign-up-button').on('click', function () {
+  //   $('#sign-in-jumbotron').show()
+  //   $('#sign-up-jumbotron').hide()
+  // })
 }
 
 const failureSignUp = () => {

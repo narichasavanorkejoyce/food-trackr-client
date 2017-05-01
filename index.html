@@ -21,8 +21,6 @@
 
 <body class="container-fluid">
 
-  <div class="layout">
-
     <div class="content">
 
       <!-- NAV BAR -->
@@ -31,9 +29,7 @@
           <div class="navbar-header">
             <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
               <span class="sr-only">Toggle Navigation</span>
-              <span class="icon-bar"></span>
-              <span class="icon-bar"></span>
-              <span class="icon-bar"></span>
+              <span class="glyphicon glyphicon-menu-hamburger" aria-hidden="true"></span>
             </button>
             <!-- <a class="navbar-brand" href="#">foodTrackr</a> -->
           </div>
@@ -51,22 +47,22 @@
       </nav>
 
       <!-- APP INTRODUCTION -->
-      <div class="jumbotron">
+      <div class="jumbotron" id="intro-jumbotron">
         <h1 class="big-headers">foodTrackr</h1>
         <p class="intro-paragraph">Hate throwing away expired food? Buying something you already have?</p>
-        <p class="intro-paragraph">foodTrackr helps keep track of what's in your kitchen and saves you time at the grocery store.</p>
+        <p class="intro-paragraph">foodTrackr helps you remember what's in the kitchen and saves you time at the grocery store.</p>
         <p><a class="btn btn-primary btn-lg" href="#" role="button" id="nav-to-sign-up-form">Get Started!</a></p>
       </div>
 
       <!-- SIGN UP FORM -->
-      <div class="jumbotron">
+      <div class="jumbotron" id="sign-up-jumbotron">
         <form id="sign-up" class="auth-login-form">
           <fieldset>
             <div class="input-group">
               <input type="text" name="credentials[email]" value="" placeholder="email" id="sign-up-email" class="form-control">
               <input type="password" name="credentials[password]" value="" placeholder="password" id="sign-up-password" class="form-control">
               <input type="password" name="credentials[password_confirmation]" value="" placeholder="confirm password" id="sign-up-confirm" class="form-control">
-              <input type="submit" name="submit" value="Sign Up!" class="btn btn-primary btn-md">
+              <input type="submit" name="submit" value="Sign Up!" class="btn btn-primary btn-md" id="sign-up-button">
             </div>
 
             <div class="auth-responses" id="sign-up-response">&nbsp;</div>
@@ -75,7 +71,7 @@
       </div>
 
       <!-- SIGN IN FORM -->
-      <div class="jumbotron">
+      <div class="jumbotron" id="sign-in-jumbotron">
         <form id="sign-in" class="auth-login-form">
           <fieldset>
             <div class="input-group">
@@ -89,30 +85,8 @@
         </form>
       </div>
 
-
-      <!-- <form id="sign-in" class="pure-form pure-form-aligned">
-        <fieldset>
-          <div class="pure-control-group">
-            <label for="name">email</label>
-            <input type="text" name="credentials[email]" value="" placeholder="email" id="sign-in-email" class="form-control">
-            <span class="pure-form-message-inline">This is a required field.</span>
-          </div>
-
-          <div class="pure-control-group">
-            <label for="password">password</label>
-            <input type="password" name="credentials[password]" value="" placeholder="password" id="sign-in-password" class="form-control">
-            <span class="pure-form-message-inline">This is a required field.</span>
-          </div>
-
-          <div class="pure-controls">
-            <input type="submit" name="submit" value="Sign in!" class="pure-button pure-button-primary">
-          </div>
-          <div class="auth-responses" id="sign-in-response">&nbsp;</div>
-        </fieldset>
-      </form> -->
-
-      <!-- Change Password -->
-      <div class="jumbotron">
+      <!-- CHANGE PASSWORD -->
+      <div class="jumbotron" id="change-password-jumbotron">
         <form id="change-password" class="auth-login-form">
           <fieldset>
             <div class="input-group">
@@ -126,30 +100,8 @@
         </form>
       </div>
 
-
-      <!-- <form id="change-password" class="pure-form pure-form-aligned">
-        <fieldset>
-          <div class="pure-control-group">
-            <label for="name">old password</label>
-            <input type="password" name="passwords[old]" value="" placeholder="old password" id="old-password" class="form-control">
-            <span class="pure-form-message-inline">This is a required field.</span>
-          </div>
-
-          <div class="pure-control-group">
-            <label for="password">new password</label>
-            <input type="password" name="passwords[new]" value="" placeholder="new password" id="new-password" class="form-control">
-            <span class="pure-form-message-inline">This is a required field.</span>
-          </div>
-
-          <div class="pure-controls">
-            <input type="submit" name="submit" value="Change Password" id="submit-change-pwd" class="pure-button pure-button-primary">
-          </div>
-          <div class="auth-responses" id="change-pwd-inst">&nbsp;</div>
-        </fieldset>
-      </form> -->
-
-      <!-- Sign Out -->
-      <div class="jumbotron">
+      <!-- SIGN OUT -->
+      <div class="jumbotron" id="sign-out-jumbotron">
         <form id="sign-out" class="auth-login-form">
           <fieldset>
             <div class="input-group">
@@ -161,23 +113,14 @@
         </form>
       </div>
 
-      <!-- <form id="sign-out" class="pure-form pure-form-aligned">
-        <fieldset>
-          <div class="pure-controls">
-            <input type="submit" name="submit" value="Sign out!" class="pure-button pure-button-primary">
-          </div>
-          <div class="auth-responses" id="sign-out-response">&nbsp;</div>
-        </fieldset>
-      </form> -->
-
-      <!-- Add Item -->
-      <div class="jumbotron">
+      <!-- ADD ITEM -->
+      <div class="jumbotron" id="add-item-jumbotron">
         <form id="add-item" class="auth-login-form">
           <fieldset>
             <div class="input-group">
               <input id="food-item" class="form-control" type="text" placeholder="item name" name="item[food_name]">
-              <input id="purchase-date" class="form-control" type="date" placeholder="puchase date" name="item[purchase_date]">
-              <input id="exp-date" class="form-control" type="date" placeholder="exp date" name="item[exp_date]">
+              <input id="purchase-date" class="form-control" type="text" onfocus="(this.type='date')" onblur="(this.type='text')" placeholder="puchase date" name="item[purchase_date]">
+              <input id="exp-date" class="form-control" type="text" onfocus="(this.type='date')" onblur="(this.type='text')" placeholder="expiration date" name="item[exp_date]">
               <input id="store-name" class="form-control" type="text" placeholder="store name" name="item[store_name]">
               <input id="quantity" class="form-control" type="boolean" placeholder="quantity" name="item[quantity]" value="true">
               <input id="purchased" class="form-control" type="boolean" placeholder="purchased" name="item[purchased]" value="true">
@@ -189,74 +132,27 @@
         </form>
       </div>
 
-
-      <!-- <form id="add-item" class="pure-form pure-form-aligned">
-        <fieldset>
-          <div class="pure-control-group">
-            <label for="name">food name</label>
-            <input id="food-item" class="form-control" type="text" placeholder="item name" name="item[food_name]">
-            <span class="pure-form-message-inline">This is a required field.</span>
-          </div>
-
-          <div class="pure-control-group">
-            <label for="purchase-date">purchase date</label>
-            <input id="purchase-date" class="form-control" type="date" placeholder="puchase date" name="item[purchase_date]">
-            <span class="pure-form-message-inline">This is a required field.</span>
-          </div>
-
-          <div class="pure-control-group">
-            <label for="exp-date">expiration date</label>
-            <input id="exp-date" class="form-control" type="date" placeholder="exp date" name="item[exp_date]">
-            <span class="pure-form-message-inline">This is a required field.</span>
-          </div>
-
-          <div class="pure-control-group">
-            <label for="store">store name</label>
-            <input id="store-name" class="form-control" type="text" placeholder="store name" name="item[store_name]">
-          </div>
-
-          <div class="pure-control-group">
-            <label for="store">quantity</label>
-            <input id="quantity" class="form-control" type="boolean" placeholder="quantity" name="item[quantity]" value="true">
-          </div>
-
-          <div class="pure-control-group">
-            <label for="store">purchased</label>
-            <input id="purchased" class="form-control" type="boolean" placeholder="purchased" name="item[purchased]" value="true">
-          </div>
-
-          <div class="pure-controls">
-            <input type="submit" name="submit" value="Add" class="pure-button pure-button-primary">
-          </div>
-          <div class="auth-responses" id="add-item-response">&nbsp;</div>
-        </fieldset>
-      </form>
-      <br> -->
-
-
       <div class="changing-content" id="show-food-list">
-        <h1> FOOD LIST </h1>
+        <!-- <h1> FOOD LIST </h1> -->
       </div>
       <br>
       <div class="changing-content" id="show-grocery-list">
-        <h1> GROCERY LIST </h1>
+        <!-- <h1> GROCERY LIST </h1> -->
       </div>
 
       <!-- Food/Add/Shop Buttons -->
-<footer class="navbar-fixed-bottom">
-  <div class="container btn-group">
-    <!-- Get All Food Items -->
-    <div class="col-xs-4 food-add-shop"><button type="button" class="btn" id="get-food-items">FOOD</button></div>
-    <!-- Show Add Form -->
-    <div class="col-xs-4 food-add-shop"><button type="button" class="btn btn-default" id="show-add-form">ADD ITEM</button></div>
-    <!-- Get All Shopping List Items -->
-    <div class="col-xs-4 food-add-shop"><button type="button" class="btn" id="get-grocery-list">SHOP</button></div>
-  </div>
-</footer>
+      <footer class="navbar-fixed-bottom" id="footer-navbar">
+        <div class="container btn-group">
+          <!-- Get All Food Items -->
+          <div class="col-xs-4 food-add-shop"><button type="button" class="btn" id="get-food-items">FOOD</button></div>
+          <!-- Show Add Form -->
+          <div class="col-xs-4 food-add-shop"><button type="button" class="btn btn-default" id="show-add-form">ADD ITEM</button></div>
+          <!-- Get All Shopping List Items -->
+          <div class="col-xs-4 food-add-shop"><button type="button" class="btn" id="get-grocery-list">SHOP</button></div>
+        </div>
+      </footer>
 
     </div>
-
-  </div>
 
 </body>
 
