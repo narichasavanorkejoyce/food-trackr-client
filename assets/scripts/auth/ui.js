@@ -4,10 +4,6 @@ const store = require('../store.js')
 const successSignUp = (data) => {
   console.log(data)
   $('#sign-up-response').text('Awesome! Now, please sign in.')
-  // $('#sign-up-button').on('click', function () {
-  //   $('#sign-in-jumbotron').show()
-  //   $('#sign-up-jumbotron').hide()
-  // })
 }
 
 const failureSignUp = () => {
@@ -19,6 +15,11 @@ const signInSuccess = (data) => {
   store.user = data.user
   console.log(store)
   $('#sign-in-response').text('Success! User has signed in.')
+  $('#sign-in-jumbotron').hide()
+  $('#sign-up-jumbotron').hide()
+  $('.food-add-shop').show()
+  $('.navbar-nav').show()
+  $('.navbar-toggle').show()
 }
 
 const signInFail = () => {
@@ -30,11 +31,17 @@ const signOutSuccess = () => {
   store.user = null
   console.log(store)
   $('#sign-out-response').text('User has signed out!')
+  $('#sign-out-jumbotron').delay(800).hide()
+  $('.food-add-shop').delay(800).hide()
+  $('.navbar-nav').delay(800).hide()
+  $('.navbar-toggle').delay(800).hide()
+  $('#intro-jumbotron').show()
 }
 
 const changePasswordSuccess = () => {
   $('#change-pwd-inst').text('Password successfully changed!')
   // console.log('Password Successfully Changed.')
+  $('#change-password-jumbotron').delay(800).fadeOut('fast')
 }
 
 const changePasswordFail = () => {

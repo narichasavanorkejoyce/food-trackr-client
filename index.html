@@ -31,15 +31,15 @@
               <span class="sr-only">Toggle Navigation</span>
               <span class="glyphicon glyphicon-menu-hamburger" aria-hidden="true"></span>
             </button>
-            <!-- <a class="navbar-brand" href="#">foodTrackr</a> -->
+            <p class="navbar-brand">foodTrackr</p>
           </div>
           <div id="navbar" class="navbar-collapse collapse" aria-expanded="false" style="height:1px;">
             <ul class="nav navbar-nav">
               <li class="active">
-                <a href="#">Change Password</a>
+                <a href="#" id="change-pwd-option">Change Password</a>
               </li>
               <li class="active">
-                <a href="#">Sign Out</a>
+                <a href="#" id="sign-out-option">Sign Out</a>
               </li>
             </ul>
           </div>
@@ -77,7 +77,7 @@
             <div class="input-group">
               <input type="text" name="credentials[email]" value="" placeholder="email" id="sign-in-email" class="form-control">
               <input type="password" name="credentials[password]" value="" placeholder="password" id="sign-in-password" class="form-control">
-              <input type="submit" name="submit" value="Sign In!" class="btn btn-primary btn-md">
+              <input type="submit" name="submit" value="Sign In!" class="btn btn-primary btn-md" id="sign-in-button">
             </div>
 
             <div class="auth-responses" id="sign-in-response">&nbsp;</div>
@@ -144,11 +144,11 @@
       <footer class="navbar-fixed-bottom" id="footer-navbar">
         <div class="container btn-group">
           <!-- Get All Food Items -->
-          <div class="col-xs-4 food-add-shop"><button type="button" class="btn" id="get-food-items">FOOD</button></div>
+          <div class="col-xs-4 food-add-shop"><button type="button" class="btn btn-default btn-block" id="get-food-items">FOOD</button></div>
           <!-- Show Add Form -->
-          <div class="col-xs-4 food-add-shop"><button type="button" class="btn btn-default" id="show-add-form">ADD ITEM</button></div>
+          <div class="col-xs-4 food-add-shop"><button type="button" class="btn btn-default btn-block" id="show-add-form"><span class="glyphicon glyphicon-plus" aria-hidden="true"></span></button></div>
           <!-- Get All Shopping List Items -->
-          <div class="col-xs-4 food-add-shop"><button type="button" class="btn" id="get-grocery-list">SHOP</button></div>
+          <div class="col-xs-4 food-add-shop"><button type="button" class="btn btn-default btn-block" id="get-grocery-list">SHOP</button></div>
         </div>
       </footer>
 
