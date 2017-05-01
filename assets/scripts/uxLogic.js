@@ -22,6 +22,8 @@ const uxLogicHandlers = () => {
     $('#instr-jumbotron').hide()
     $('#grocery-list-table').empty()
     $('#food-list-table').empty()
+    $('#old-password').val('')
+    $('#new-password').val('')
   })
 
   // Show/hide sign out jumbotron
@@ -34,6 +36,12 @@ const uxLogicHandlers = () => {
     $('#instr-jumbotron').hide()
     $('#grocery-list-table').empty()
     $('#food-list-table').empty()
+    $('#sign-up-email').val('')
+    $('#sign-up-password').val('')
+    $('#sign-up-confirm').val('')
+    $('#sign-in-email').val('')
+    $('#sign-in-password').val('')
+    $('.auth-responses').text('')
   })
 
   // Show/hide instruction jumbotron
@@ -51,24 +59,16 @@ const uxLogicHandlers = () => {
     $('#grocery-list-table').hide()
     $('#change-password-jumbotron').hide()
     $('#sign-out-jumbotron').hide()
+    $('#food-item').val('')
+    $('#purchase-date').val('')
+    $('#exp-date').val('')
+    $('#store-name').val('')
+    $('#add-item-response').text('')
   })
 
-  // Show/hide food table
-  $('#get-food-items').on('click', function () {
-    // $('#add-item-jumbotron').hide()
-    // $('#instr-jumbotron').hide()
-    // $('#show-grocery-list').hide()
-    // $('#change-password-jumbotron').hide()
-    // $('#sign-out-jumbotron').hide()
-  })
-
-  // Show/hide grocery list table
-  $('#get-grocery-list').on('click', function () {
-    // $('#instr-jumbotron').hide()
-    // $('#add-item-jumbotron').hide()
-    // $('#show-food-list').hide()
-    // $('#change-password-jumbotron').hide()
-    // $('#sign-out-jumbotron').hide()
+  // Navigate to add item form once an item has been purchased
+  $('.purchase-item').on('click', function () {
+    $('#add-item-jumbotron').show()
   })
 
   // Show/hide nav bar options
