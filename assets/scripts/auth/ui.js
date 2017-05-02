@@ -2,7 +2,7 @@
 const store = require('../store.js')
 
 const successSignUp = (data) => {
-  console.log(data)
+  // console.log(data)
   $('#sign-up-response').text('Awesome! Now, please sign in.')
 }
 
@@ -13,14 +13,14 @@ const failureSignUp = () => {
 
 const signInSuccess = (data) => {
   store.user = data.user
-  console.log(store)
+  // console.log(store)
   $('#sign-in-response').text('Success! User has signed in.')
   $('#sign-in-jumbotron').hide()
   $('#sign-up-jumbotron').hide()
   $('.food-add-shop').show()
   $('.navbar-nav').show()
   $('.navbar-toggle').show()
-  $('#instr-jumbotron').show()
+  $('#instr-jumbotron').fadeIn()
 }
 
 const signInFail = () => {
@@ -30,13 +30,13 @@ const signInFail = () => {
 
 const signOutSuccess = () => {
   store.user = null
-  console.log(store)
+  // console.log(store)
   $('#sign-out-response').text('User has signed out!')
   $('#sign-out-jumbotron').delay(800).fadeOut('fast')
   $('.food-add-shop').delay(800).hide()
   $('.navbar-nav').delay(800).hide()
   $('.navbar-toggle').delay(800).hide()
-  $('#intro-jumbotron').show()
+  $('#intro-jumbotron').delay(1600).fadeIn()
 }
 
 const changePasswordSuccess = () => {

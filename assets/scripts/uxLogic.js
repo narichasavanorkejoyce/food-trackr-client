@@ -7,8 +7,8 @@ const uxLogicHandlers = () => {
   $('#sign-up-jumbotron').hide()
   $('#sign-in-jumbotron').hide()
   $('#nav-to-sign-up-form').on('click', function () {
-    $('#sign-up-jumbotron').show()
-    $('#sign-in-jumbotron').show()
+    $('#sign-up-jumbotron').fadeIn()
+    $('#sign-in-jumbotron').fadeIn()
     $('#intro-jumbotron').hide()
   })
 

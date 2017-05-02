@@ -10,7 +10,7 @@ const addNewItem = function (event) {
   api.addNewItem(data)
     .done(ui.addNewItemSuccess)
     .fail(ui.addNewItemFail)
-  console.log('addNewItem ran!')
+  // console.log('addNewItem ran!')
 }
 
 const getFoodItems = function (event) {
@@ -42,20 +42,20 @@ const getGroceryListAgain = function () {
 }
 
 const deleteItem = function () {
-  console.log('deleteItem ran!')
+  // console.log('deleteItem ran!')
   event.preventDefault()
   const id = $(this).attr('data-id')
-  console.log('id is:' + id)
+  // console.log('id is:' + id)
   api.deleteItem(id)
     .done(ui.deleteItemSuccess, getFoodItemsAgain)
     .fail(ui.deleteItemFail)
 }
 
 const deletePurchasedItem = function () {
-  console.log('deletePurchasedItem ran!')
+  // console.log('deletePurchasedItem ran!')
   event.preventDefault()
   const id = $(this).attr('data-id')
-  console.log('id is:' + id)
+  // console.log('id is:' + id)
   api.deletePurchasedItem(id)
     .done(ui.deletePurchasedItemSuccess, getGroceryListAgain)
     .fail(ui.deletePurchasedItemFail)
@@ -63,13 +63,13 @@ const deletePurchasedItem = function () {
 
 const updateQuantity = function (event) {
   event.preventDefault()
-  console.log('updateQuantity button works')
+  // console.log('updateQuantity button works')
   const id = $(this).attr('data-id')
-  console.log('id is:' + id)
+  // console.log('id is:' + id)
   api.updateQuantity(id)
     .done(ui.updateQuantitySuccess, getGroceryListAgain)
     .fail(ui.updateQuantityFail)
-  console.log('updateQuantity ran!')
+  // console.log('updateQuantity ran!')
 }
 
 const trackrHandlers = () => {
