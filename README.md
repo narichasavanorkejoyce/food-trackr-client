@@ -8,14 +8,14 @@ Link to API:
 ![Imgur](http://i.imgur.com/ZzUgTGj.png)
 
 ## About
-foodTrackr is an app to help people remember what is in their kitchen. When I'm out of the house, I often forget what I have in the fridge and it's more likely that I'll buy something I already have. In addition, foodTrackr can help you keep track of when food will expire. My hope is that we can reduce accidental food waste if people are more aware of what is in their fridge.
+foodTrackr is an app to help people remember what is in their kitchen. When I'm out of the house, I often forget what food items are in the house. It's more likely that I'll buy something I already have. In addition, foodTrackr can help you keep track of when food will expire. My hope is that we can reduce accidental food waste if people are more aware of what is in their kitchen.
 
 ## User Stories
 
 - I want to host a browser application that interacts with a custom API deployed through Heroku.
 - I want to share my work through GitHub git repositories (API, client).
 - I want to maintain a commit history with detailed commit messages and produce documentation in the form of a README.
-- I want to create a mobile-first single-page application called foodTrackr, which will track the contents of a user's refrigerator and help reduce accidental food waste.
+- I want to create a mobile-first single-page application called foodTrackr, which will track the contents of a user's kitchen and help reduce accidental food waste.
 - I want my users to have login, logout, and change password functionality.
 - I want to build a front-end Javascript application that can render, read, and write from a securely accessible API.
 - I want actions that change data to be authenticated, and "owned" by the user performing the change.
