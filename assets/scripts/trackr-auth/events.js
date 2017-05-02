@@ -51,6 +51,16 @@ const deleteItem = function () {
     .fail(ui.deleteItemFail)
 }
 
+const deletePurchasedItem = function () {
+  console.log('deletePurchasedItem ran!')
+  event.preventDefault()
+  const id = $(this).attr('data-id')
+  console.log('id is:' + id)
+  api.deletePurchasedItem(id)
+    .done(ui.deletePurchasedItemSuccess, getGroceryListAgain)
+    .fail(ui.deletePurchasedItemFail)
+}
+
 const updateQuantity = function (event) {
   event.preventDefault()
   console.log('updateQuantity button works')
@@ -68,6 +78,7 @@ const trackrHandlers = () => {
   $('#get-grocery-list').on('click', getGroceryList)
   $(document).on('click', '.remove-item', deleteItem)
   $(document).on('click', '.move-to-grocery-list', updateQuantity)
+  $(document).on('click', '.purchase-item', deletePurchasedItem)
 }
 
 module.exports = {

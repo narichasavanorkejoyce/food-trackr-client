@@ -32,7 +32,7 @@ const signOutSuccess = () => {
   store.user = null
   console.log(store)
   $('#sign-out-response').text('User has signed out!')
-  $('#sign-out-jumbotron').delay(800).hide()
+  $('#sign-out-jumbotron').delay(800).fadeOut('fast')
   $('.food-add-shop').delay(800).hide()
   $('.navbar-nav').delay(800).hide()
   $('.navbar-toggle').delay(800).hide()
@@ -42,7 +42,7 @@ const signOutSuccess = () => {
 const changePasswordSuccess = () => {
   $('#change-pwd-inst').text('Password successfully changed!')
   // console.log('Password Successfully Changed.')
-  $('#change-password-jumbotron').delay(800).fadeOut()
+  $('#change-password-jumbotron').delay(800).fadeOut('fast')
   $('#instr-jumbotron').delay(1600).fadeIn()
 }
 

@@ -49,6 +49,16 @@ const deleteItem = (id) => {
   })
 }
 
+const deletePurchasedItem = (id) => {
+  return $.ajax({
+    url: config.apiOrigin + '/items/' + id,
+    method: 'DELETE',
+    headers: {
+      Authorization: 'Token token=' + store.user.token
+    }
+  })
+}
+
 const updateQuantity = function (id) {
   // data = store.item
   // console.log('data is: ' + data)
@@ -72,5 +82,6 @@ module.exports = {
   getFoodItems,
   getGroceryList,
   deleteItem,
+  deletePurchasedItem,
   updateQuantity
 }

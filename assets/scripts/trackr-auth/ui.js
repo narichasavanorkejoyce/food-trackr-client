@@ -6,12 +6,13 @@ const displayGroceryListTemplate = require('../templates/get-grocery-list.handle
 const addNewItemSuccess = (data) => {
   console.log('addNewItemSuccess worked!')
   store.item = data.item
-  $('#add-item-response').text('Success! Click FOOD to see all items.')
+  $('#add-item-response').text('Success! Add another item or click FOOD to see all items.')
 }
 
 const addNewItemFail = (error) => {
   console.error(error)
   console.log('addNewItem failed!')
+  $('#add-item-response').text('All field forms are required. Please try again.')
 }
 
 const getFoodItemsSuccess = (data) => {
@@ -53,7 +54,7 @@ const getGroceryListFail = (error) => {
 const updateQuantitySuccess = (data) => {
   console.log(data)
   console.log('updateQuantity worked!')
-  $('#show-grocery-list').empty()
+  $('#show-food-list').empty()
 }
 
 const updateQuantityFail = (error) => {
@@ -71,6 +72,16 @@ const deleteItemFail = (error) => {
   console.error(error)
 }
 
+const deletePurchasedItemSuccess = (data) => {
+  console.log(data)
+  console.log('item has been deleted!')
+  $('#show-grocery-list').empty()
+}
+
+const deletePurchasedItemFail = (error) => {
+  console.error(error)
+}
+
 module.exports = {
   addNewItemSuccess,
   addNewItemFail,
@@ -81,5 +92,7 @@ module.exports = {
   updateQuantitySuccess,
   updateQuantityFail,
   deleteItemSuccess,
-  deleteItemFail
+  deleteItemFail,
+  deletePurchasedItemSuccess,
+  deletePurchasedItemFail
 }
