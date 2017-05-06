@@ -13,7 +13,7 @@ const failureSignUp = () => {
 
 const signInSuccess = (data) => {
   store.user = data.user
-  console.log(store)
+  // console.log(store)
   $('#sign-in-response').text('Success! User has signed in.')
   $('#sign-in-jumbotron').hide()
   $('#sign-up-jumbotron').hide()
