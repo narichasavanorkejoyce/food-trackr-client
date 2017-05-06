@@ -61,7 +61,7 @@ const deletePurchasedItem = (id) => {
 
 const updateQuantity = function (id) {
   // data = store.item
-  // console.log('data is: ' + data)
+  // console.log('data is: ' + id)
   // console.log('store' + store)
   return $.ajax({
     url: config.apiOrigin + '/items/' + id,
