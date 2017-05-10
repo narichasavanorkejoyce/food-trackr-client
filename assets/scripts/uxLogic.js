@@ -71,6 +71,11 @@ const uxLogicHandlers = () => {
     $('#add-item-jumbotron').show()
   })
 
+  // Clear change password response when form appears
+  $('#change-pwd-option').on('click', function () {
+    $('#change-pwd-inst').text('')
+  })
+
   // Show/hide nav bar options
   $('.navbar-nav').hide()
   $('.navbar-toggle').hide()
