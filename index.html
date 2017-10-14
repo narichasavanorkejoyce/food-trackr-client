@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>foodTrackr</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- Link to main.css -->
+  <link rel="stylesheet" type="text/css" href="assets/styles/index.scss">
+
+  <!-- Link to font family -->
+  <link href="https://fonts.googleapis.com/css?family=Pacifico|Raleway" rel="stylesheet">
+
+  <!-- Do not add `link` tags unless you know what you are doing -->
+  <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+
+  <!-- Do not add `script` tags unless you know what you are doing -->
+  <script src="public/vendor.js" type="text/javascript" charset="utf-8" defer></script>
+  <script src="public/application.js" type="text/javascript" charset="utf-8" defer></script>
+</head>
+
+<body class="container-fluid">
+
+    <div class="content">
+
+      <!-- NAV BAR -->
+      <nav class="navbar navbar-default navbar-fixed-top">
+        <div class="container">
+          <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+              <span class="sr-only">Toggle Navigation</span>
+              <span class="glyphicon glyphicon-menu-hamburger" aria-hidden="true"></span>
+            </button>
+            <p class="navbar-brand">foodTrackr</p>
+          </div>
+          <div id="navbar" class="navbar-collapse collapse" aria-expanded="false" style="height:1px;">
+            <ul class="nav navbar-nav">
+              <li class="active">
+                <a href="#" id="change-pwd-option">Change Password</a>
+              </li>
+              <li class="active">
+                <a href="#" id="sign-out-option">Sign Out</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+
+      <!-- APP INTRODUCTION -->
+      <div class="jumbotron" id="intro-jumbotron">
+        <h1 class="big-headers">foodTrackr</h1>
+        <p class="intro-paragraph">Hate throwing away expired food? Buying something you already have?</p>
+        <p class="intro-paragraph">foodTrackr helps you remember what's in the kitchen and saves you time at the grocery store.</p>
+        <p><a class="btn btn-primary btn-lg" href="#" role="button" id="nav-to-sign-up-form">Get Started!</a></p>
+      </div>
+
+      <!-- SIGN UP FORM -->
+      <div class="jumbotron" id="sign-up-jumbotron">
+        <form id="sign-up" class="auth-login-form">
+          <fieldset>
+            <div class="input-group center-block">
+              <input type="text" name="credentials[email]" value="" placeholder="email" id="sign-up-email" class="form-control">
+              <input type="password" name="credentials[password]" value="" placeholder="password" id="sign-up-password" class="form-control">
+              <input type="password" name="credentials[password_confirmation]" value="" placeholder="confirm password" id="sign-up-confirm" class="form-control">
+              <input type="submit" name="submit" value="Sign Up!" class="btn btn-primary btn-md" id="sign-up-button">
+            </div>
+
+            <div class="auth-responses" id="sign-up-response">&nbsp;</div>
+          </fieldset>
+        </form>
+      </div>
+
+      <!-- SIGN IN FORM -->
+      <div class="jumbotron" id="sign-in-jumbotron">
+        <form id="sign-in" class="auth-login-form">
+          <fieldset>
+            <div class="input-group center-block">
+              <input type="text" name="credentials[email]" value="" placeholder="email" id="sign-in-email" class="form-control">
+              <input type="password" name="credentials[password]" value="" placeholder="password" id="sign-in-password" class="form-control">
+              <input type="submit" name="submit" value="Sign In!" class="btn btn-primary btn-md" id="sign-in-button">
+            </div>
+
+            <div class="auth-responses" id="sign-in-response">&nbsp;</div>
+          </fieldset>
+        </form>
+      </div>
+
+      <!-- CHANGE PASSWORD -->
+      <div class="jumbotron" id="change-password-jumbotron">
+        <form id="change-password" class="auth-login-form">
+          <fieldset>
+            <div class="input-group center-block">
+              <input type="password" name="passwords[old]" value="" placeholder="old password" id="old-password" class="form-control">
+              <input type="password" name="passwords[new]" value="" placeholder="new password" id="new-password" class="form-control">
+              <input type="submit" name="submit" value="Change Password" class="btn btn-primary btn-md">
+            </div>
+
+            <div class="auth-responses" id="change-pwd-inst">&nbsp;</div>
+          </fieldset>
+        </form>
+      </div>
+
+      <!-- SIGN OUT -->
+      <div class="jumbotron" id="sign-out-jumbotron">
+        <form id="sign-out" class="auth-login-form">
+          <fieldset>
+            <div class="input-group center-block">
+              <input type="submit" name="submit" value="Sign Out" class="btn btn-primary btn-md form-control">
+            </div>
+
+            <div class="auth-responses" id="sign-out-response">&nbsp;</div>
+          </fieldset>
+        </form>
+      </div>
+
+      <!-- APP INSTRUCTIONS -->
+      <div class="jumbotron" id="instr-jumbotron">
+        <h1 class="big-headers">Welcome!</h1>
+        <p class="instr-paragraph">Click <span class="glyphicon glyphicon-plus" aria-hidden="true"></span> to add a new food item.</p>
+        <p class="instr-paragraph">Click FOOD to retrieve a list of items in your kitchen.</p>
+        <p class="instr-paragraph">Click SHOP to get your grocery list!</p>
+      </div>
+
+      <!-- ADD ITEM -->
+      <div class="jumbotron" id="add-item-jumbotron">
+        <form id="add-item" class="auth-login-form">
+          <fieldset>
+            <div class="input-group center-block">
+              <input id="food-item" class="form-control" type="text" placeholder="item name" name="item[food_name]">
+              <input id="purchase-date" class="form-control" type="text" onfocus="(this.type='date')" onblur="(this.type='text')" placeholder="puchase date" name="item[purchase_date]">
+              <input id="exp-date" class="form-control" type="text" onfocus="(this.type='date')" onblur="(this.type='text')" placeholder="expiration date" name="item[exp_date]">
+              <input id="store-name" class="form-control" type="text" placeholder="store name" name="item[store_name]">
+              <input id="quantity" class="form-control" type="boolean" placeholder="quantity" name="item[quantity]" value="true">
+              <input id="purchased" class="form-control" type="boolean" placeholder="purchased" name="item[purchased]" value="true">
+              <input type="submit" name="submit" value="Add Item" class="btn btn-primary btn-md">
+            </div>
+
+            <div class="auth-responses" id="add-item-response">&nbsp;</div>
+          </fieldset>
+        </form>
+      </div>
+
+      <div class="changing-content" id="show-food-list">
+        <!-- <h1> FOOD LIST </h1> -->
+      </div>
+      <br>
+      <div class="changing-content" id="show-grocery-list">
+        <!-- <h1> GROCERY LIST </h1> -->
+      </div>
+
+      <!-- Food/Add/Shop Buttons -->
+      <footer class="navbar-fixed-bottom" id="footer-navbar">
+        <div class="container btn-group">
+          <!-- Get All Food Items -->
+          <div class="col-xs-4 food-add-shop"><button type="button" class="btn btn-default btn-block" id="get-food-items">FOOD</button></div>
+          <!-- Show Add Form -->
+          <div class="col-xs-4 food-add-shop"><button type="button" class="btn btn-default btn-block" id="show-add-form"><span class="glyphicon glyphicon-plus" aria-hidden="true"></span></button></div>
+          <!-- Get All Shopping List Items -->
+          <div class="col-xs-4 food-add-shop"><button type="button" class="btn btn-default btn-block" id="get-grocery-list">SHOP</button></div>
+        </div>
+      </footer>
+
+    </div>
+
+</body>
+
+</html>
